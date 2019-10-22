@@ -11,6 +11,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Netflix UI Redesign',
       debugShowCheckedModeBanner: false,
       home: PageView(
+        //controller: pageViewController,
+        scrollDirection: Axis.vertical,
           children: <Widget>[
             Container(
 
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
             ),
 
           ],
-        scrollDirection: Axis.vertical,
+
         onPageChanged: (num) {
           print("Número da página atual : " + num.toString());
         },
@@ -48,12 +50,9 @@ class MyApp extends StatelessWidget {
     children: <Widget>[
       Container(
         color: Colors.amber,
-      ),
-      Container(
-        color: Colors.blueAccent,
-      ),
-      Container(
-        color: Colors.pinkAccent,
+        child: Center(
+          child: Text("Second page With some more containers",),
+        ),
       ),
     ],
   );
